@@ -1,23 +1,33 @@
-import { NavLink } from "@/components/NavLink";
+import { NavBar } from "@/components/NavBar";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
-    <nav className="w-full flex justify-between items-center bg-[#0056b3] px-8 py-4">
-      <Image src="/logo.svg" alt="Logo" width={120} height={100} />
-      <div className="flex items-center gap-x-8 text-white">
-        <NavLink link="#" text="About" />
-        <NavLink link="#" text="Contact" />
-      </div>
-      <div>
+    <div className="h-screen w-full overflow-hidden relative flex justify-center items-center">
+      <NavBar />
+      <Image
+        src={"/mountBg.jpg"}
+        alt={"bg"}
+        fill
+        className="-z-10 brightness-[0.4]"
+      />
+      <div className="flex flex-col items-center gap-y-12 select-none">
+        <div className="text-white font-semibold text-3xl uppercase">
+          Create your quiz and share it to Everyone
+        </div>
         <Link
           href={"#"}
-          className="w-24 h-8 flex justify-center items-center bg-transparent border border-[#FFD700] rounded text-[#FFD700] font-semibold hover:bg-[#FFD700] hover:text-[#0056b3] transition-all duration-300"
+          className="text-white font-semibold text-xl border border-white/50 px-8 py-2 rounded bg-black/50 relative group overflow-hidden"
         >
-          CREATE
+          <span className="ease absolute left-0 top-0 h-0 w-0 border-t border-white transition-all duration-500 rounded group-hover:w-full"></span>
+          <span className="ease absolute right-0 top-0 h-0 w-0 border-r border-white transition-all duration-500 rounded group-hover:h-full"></span>
+          <span className="ease absolute bottom-0 right-0 h-0 w-0 border-b border-white transition-all duration-500 rounded group-hover:w-full"></span>
+          <span className="ease absolute bottom-0 left-0 h-0 w-0 border-l border-white transition-all duration-500 rounded group-hover:h-full"></span>
+
+          <span className="group-hover:animate-pulse">Start Now</span>
         </Link>
       </div>
-    </nav>
+    </div>
   );
 }
