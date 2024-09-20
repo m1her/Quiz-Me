@@ -7,7 +7,18 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      keyframes: {
+        "spin-back-and-forth": {
+          "0%": { transform: "rotate(40deg)" },
+          "50%": { transform: "rotate(110deg)" },
+          "100%": { transform: "rotate(40deg)" },
+        },
+      },
+      animation: {
+        "spin-back-and-forth": "spin-back-and-forth 2s linear infinite",
+      },
+    },
   },
   plugins: [],
 };

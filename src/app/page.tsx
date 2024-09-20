@@ -1,11 +1,10 @@
-import { NavBar } from "@/components/NavBar";
 import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
   return (
     <div className="h-screen w-full overflow-hidden relative flex justify-center items-center">
-      <NavBar />
+
       <Image
         src={"/mountBg.jpg"}
         alt={"bg"}
