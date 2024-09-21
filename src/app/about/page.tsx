@@ -1,5 +1,5 @@
-import { PencilIcon } from "@heroicons/react/16/solid";
-import { WrenchIcon } from "@heroicons/react/24/outline";
+import { PencilIcon, StarIcon } from "@heroicons/react/16/solid";
+import { PaperAirplaneIcon, WrenchIcon } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import React from "react";
 
@@ -59,9 +59,33 @@ const About = () => {
       </div>
       <div className="flex items-center justify-between gap-x-8 w-1/2 select-none">
         <div className="text-xl font-medium">3- Send Links</div>
+        <div className="border border-black rounded flex items-center justify-center gap-x-2 w-52 h-9 relative group overflow-hidden bg-white hover:bg-blue-500 transition-colors hover:duration-300 duration-0 hover:delay-700 delay-0">
+          <PaperAirplaneIcon className="w-6 absolute left-2 group-hover:left-60 transition-all group-hover:duration-1000 duration-0" />
+          <div className="flex items-center text-lg font-semibold gap-x-4 absolute right-4 uppercase">
+            {"Send".split("").map((item, idx) => (
+              <span
+                key={idx}
+                className="group-hover:opacity-0 group-hover:transition-opacity transition-none duration-100"
+                style={{ transitionDelay: idx / 10 + 0.2 + "s" }}
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+          <div className="w-fit text-white text-lg font-semibold flex">
+            Sent
+          </div>
+        </div>
       </div>
       <div className="flex items-center justify-between gap-x-8 w-1/2 select-none">
-        <div></div>
+        <div className="flex gap-x-1 items-end group h-16">
+          <div className="w-3 h-10 group-hover:h-6 rounded bg-black transition-all duration-300"></div>
+          <div className="w-3 h-6 group-hover:h-10 rounded bg-black transition-all duration-300"></div>
+          <div className="w-3 h-16 group-hover:h-12 rounded bg-black transition-all duration-300"></div>
+          <div className="w-3 h-12 group-hover:h-16 rounded bg-black transition-all duration-300 relative">
+            <StarIcon className="w-5 absolute -top-5 -right-1 text-[#FFD700] opacity-0 group-hover:opacity-100 group-hover:delay-200 delay-0 transition-opacity group-hover:duration-200 duration-0" />
+          </div>
+        </div>
         <div className="text-xl font-medium">4- Watch results</div>
       </div>
     </div>
