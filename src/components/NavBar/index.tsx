@@ -9,9 +9,9 @@ export const NavBar = () => {
       <Link href={"/"}>
         <Image src="/logo.svg" alt="Logo" width={100} height={100} />
       </Link>
-      <div className="flex items-center gap-x-8 text-white">
+      <div className="flex items-center justify-center text-white w-full h-8">
         <NavLink link="/about" text="About" />
-        <NavLink link="#" text="Contact" />
+        <NavLink link="/contact" text="Contact" />
       </div>
       <div>
         <Link
