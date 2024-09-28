@@ -15,7 +15,7 @@ export const NavBar = () => {
       </div>
       <div>
         <Link
-          href={"#"}
+          href={"/login"}
           className="w-24 h-8 flex justify-center items-center bg-transparent border border-white rounded text-white font-medium text-sm hover:bg-white hover:text-black transition-all duration-300"
         >
           LOGIN
